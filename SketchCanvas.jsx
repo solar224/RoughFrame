@@ -1,7 +1,7 @@
 import { useContext, useEffect, useCallback } from "react";
 import { Box } from "@mui/material";
 import { EditorProvider, useEditorDispatch, ACTION } from "./EditorContext";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../context/ThemeContext";
 import TopBar from "./ui/TopBar";
 import ToolDock from "./ui/ToolDock";
 import Inspector from "./ui/Inspector";
@@ -36,7 +36,7 @@ function SketchCanvasLayout() {
     <Box
       sx={{
         width: "100%",
-        height: { xs: "calc(100vh - 56px)", md: "calc(100vh - 64px)" },
+        height: "100%",
         overflow: "hidden",
         position: "relative",
       }}
